@@ -51,43 +51,6 @@ The server will start at [http://localhost:8000](http://localhost:8000).
 
 ## Example Task Object
 
-┌─────────────────────────────┐
-│      User/Frontend App      │
-└─────────────┬───────────────┘
-              │
-              ▼
-   ┌───────────────────────────┐
-   │   HTTP Request (Browser,  │
-   │   Postman, JS, etc.)      │
-   └─────────────┬─────────────┘
-                 │
-                 ▼
-   ┌───────────────────────────┐
-   │      Go Web Server        │
-   │  (main.go, Gorilla Mux)   │
-   └─────────────┬─────────────┘
-                 │
-                 ▼
-   ┌───────────────────────────┐
-   │        Routes             │
-   │  /tasks        (GET)      │
-   │  /tasks        (POST)     │
-   │  /tasks/{id}   (PUT)      │
-   │  /tasks/{id}   (DELETE)   │
-   └─────────────┬─────────────┘
-                 │
-                 ▼
-   ┌───────────────────────────┐
-   │      Handlers             │
-   │  GetTasks, CreateTask,    │
-   │  UpdateTask, DeleteTask   │
-   └─────────────┬─────────────┘
-                 │
-                 ▼
-   ┌───────────────────────────┐
-   │      MongoDB (db)         │
-   └───────────────────────────┘
-
 ```json
 {
   "id": "1",
